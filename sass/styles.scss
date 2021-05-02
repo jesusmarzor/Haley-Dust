@@ -1,0 +1,358 @@
+@import "variables";
+@import "fonts";
+
+*{
+    margin: 0em;
+    padding: 0em;
+}
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    color: $color_letter;
+}
+header{
+    border-bottom: 1px solid $color_line;
+
+.header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0em auto;
+        width: 70%;
+        &__logo{
+            width: 13.4em;
+            position: relative;
+            top: 0.78em;
+        }
+        &__menu{
+            margin: auto;
+        }
+        .header__rrss{
+            margin-left: auto;
+            margin-right: 1.5em;
+        }
+        .header__search{
+            width: 1em;
+            height: 1em;
+            background-color: transparent;
+            border: none;
+            margin-right: 1em;
+            cursor: pointer;
+        }
+    }
+}
+
+.menu{
+    display: flex;
+    font-family: 'Lato-Bold';
+    &__li{
+        line-height: 3em;
+        list-style: none;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+    &__a{
+        padding-top: 2em;
+        padding-bottom: 2em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        font-size: 0.6em;
+        letter-spacing: 0.1em;
+        color: $color_letter;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    &__a:hover{
+        color:gray;
+    }
+}
+
+.rrss{
+    display: flex;
+    &__li{
+        list-style: none;
+        padding-left: 0.1em;
+        padding-right: 0.1em;
+    }
+    &__icon{
+        width: 0.8em;
+        height: 0.8em;
+    }
+    &__path{
+        fill: $color_icon;
+    }
+    &__a:hover{
+        .rrss__path{
+            fill:$color_letter;
+        }
+    } 
+    // FOOTER
+    &__li--footer{
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        list-style: none;
+        line-height: 2em;
+        width: 2em;
+        height: 2em;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: all 500ms ease-in-out;
+    }  
+    &__path--footer{
+        fill: $color_letter;
+        transition: all 500ms ease-in-out;
+    }
+    &__li--footer:hover{
+        background-color: $color_letter;    
+        .rrss__path--footer{
+            fill: white;
+        }
+    }
+    
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 7.5em;
+    &__img{
+        width: 17em;
+        border-radius: 100%;
+    }
+    &__title{
+        font-family: 'Poppins';
+        font-size: 3em;
+        font-weight: 300;
+        margin-top: -2em;
+    }
+    &__greet{
+        font-family: 'Poppins-Bold';
+        display: block;
+        margin-bottom: -0.3em;
+        font-style: normal;
+        font-size: 3.5em;
+        letter-spacing: -0.05em;
+        text-shadow: 0.05em -0.05em 0 $shadow;
+    }
+    &__title--rotate{
+        font-family: 'Poppins';
+        font-size: 3em;
+        font-weight: 300;
+        margin-top: -0.3em;
+        margin-bottom: 0em;
+    }
+    &__links{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-top: 4em;
+    }
+        
+    &__latest{
+        padding-top: 5em;
+    }
+}
+
+.rotate{
+    &__letter{
+        display: none;
+    }
+    &__letter--visible{
+        display: inherit;
+        font-family: 'Poppins-Bold';
+    }
+}
+
+.link{
+    margin: auto;
+    width: 13.5em;
+    height: 12em;
+    background-color: $color_letter;
+    overflow: hidden;
+    text-align: center;
+    &__p{
+        font-family:'Poppins';
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 15em;
+        font-size: 0.9em;
+        position: absolute;
+        top: 54.5em;
+        letter-spacing: 0.1em;
+        color: white;
+    }
+    &__img{
+        width: 13.5em;
+        opacity: 0.8;
+        transition: all 500ms;
+    }
+    &__img:hover{
+        transform: scale(1.5);
+        opacity: 0.5; 
+    }
+    &__img--little{
+        width: 15.3em;
+    }
+}
+    
+.post{
+    display: flex;
+    align-items: center;
+    width: 72%;
+    margin: auto;
+    text-decoration: none;
+    color: $color_letter;
+    border-bottom: 0.1em solid $color_line;
+    &__img{
+        position: absolute;
+        width: 5.8em;
+        height: 5.8em;
+        opacity: 0;
+        transition: opacity 400ms ease-in-out;
+    }
+    &__date{
+    width: 5.8em;
+    height: 5.8em;
+    transition: opacity 400ms ease-in-out;
+    }
+    &__day{
+        font-family: 'Poppins-Bold';
+        margin-top: 0.5em;
+        font-size: 2em;
+    }
+    &__month{
+        margin-top: -1em;
+        text-transform: uppercase;
+        color: $color_gray;
+        letter-spacing: 0.2em;
+        font-size: 0.6em;
+    }
+    &__title{
+        font-family: 'Poppins';
+        margin-left: 2.5em;
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+        font-weight: bold;
+    }
+    // FOOTER
+    &--footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 6.8em;
+        height: 6.8em;
+        background-color: blue;
+        overflow: hidden;
+    }
+    &__img--footer{
+        width: 6.8em;
+        transition: opacity 500ms ease-in-out;
+    }
+    &__icon--footer{
+        position: absolute;
+        opacity: 0;
+        width: 1em;
+        height: 1em;
+        padding: 0.5em;
+        transition: opacity 500ms ease-in-out;    
+    }
+    &__path--footer{
+        fill: white;
+    }
+    &--footer:hover{
+        .post__img--footer{
+            opacity: 0.6;
+        }
+        .post__icon--footer{
+            opacity: 1;
+        }
+    }
+}
+.post:hover{
+    .post__img{
+        opacity: 1;
+    }
+    .post__date{
+        opacity: 0;
+    }
+}
+.post:nth-child(8){
+    border-bottom: none;
+    margin-bottom: 2em;
+}
+$post: 1;
+@for $post from 1 through 7{
+    .post:nth-child(#{$post+1}){
+        .post__img{
+            background-image: url('../css/img/' + $post + 'article.jpg');
+            background-size: 5.8em;
+        }
+    }
+}
+.posts{
+    &__title{
+        font-family:'Lato-Bold';
+        letter-spacing: 0.2em;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        color: $color_gray;
+        padding-bottom: 4em;
+    }
+    &__btnmore{
+        border: 0.2em solid $color_letter;
+        padding: 1.4em 2.4em;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 1px;
+        color: $color_letter;
+        text-decoration: none;
+        transition: all 100ms ease-out;
+    }
+    &__btnmore:hover{
+        background-color: $color_letter;
+        color: white;
+ }
+}
+.footer{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-top: 0.1em solid $color_line;
+    &__logo{
+        margin-top: 3.3em;
+        width: 12em;
+    }
+    &__slogan{
+        margin-top: 1.2em;
+        color: $color_gray;
+        font-size: 0.5em;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+    &__rrss{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+    }
+    &__author{
+        padding: 2em;
+        font-size: 0.7em;
+        color: $color_letter;
+    }
+}
+.instagram{
+    &__title{
+        color: $color_gray;
+        text-transform: uppercase;
+        font-size: 0.6em;
+        letter-spacing: 0.2em;
+        margin-bottom: 2em;
+    }
+    &__posts{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

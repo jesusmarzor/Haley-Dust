@@ -538,21 +538,14 @@ header .header__search {
   }
   .container__title {
     font-size: 2em;
-    font-weight: 300;
     margin-top: -2.3em;
   }
   .container__greet {
     margin-bottom: -0.3em;
     font-size: 4em;
-    letter-spacing: -0.05em;
-    text-shadow: 0.05em -0.05em 0 #fff;
   }
   .container__title--rotate {
-    font-family: 'Poppins';
-    font-size: 3em;
-    font-weight: 300;
-    margin-top: -0.3em;
-    margin-bottom: 0em;
+    font-size: 2em;
   }
   .container__links {
     display: -ms-grid;

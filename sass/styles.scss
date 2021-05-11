@@ -26,11 +26,11 @@ header{
         &__menu{
             margin: auto;
         }
-        .header__rrss{
+        &__rrss{
             margin-left: auto;
             margin-right: 1.5em;
         }
-        .header__search{
+        &__search{
             width: 1em;
             height: 1em;
             background-color: transparent;
@@ -170,6 +170,7 @@ header{
     background-color: $color_letter;
     overflow: hidden;
     text-align: center;
+    position: relative;
     &__p{
         font-family:'Poppins';
         font-weight: bold;
@@ -177,7 +178,7 @@ header{
         width: 15em;
         font-size: 0.9em;
         position: absolute;
-        top: 54.5em;
+        top: 6em;
         letter-spacing: 0.1em;
         color: white;
     }
@@ -236,6 +237,8 @@ header{
     }
     // FOOTER
     &--footer{
+        margin: auto;
+        margin-top: 0.1em;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
@@ -354,5 +357,121 @@ $post: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+@media (max-width: 1252px){
+    .container{
+        &__links{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .link{
+        margin-top: 1em;
+    }
+    .instagram{
+        &__posts{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+}
+
+@media (max-width: 960px){
+    header .header{
+        width: 100%;
+        &__logo{
+            margin-left: 1em;
+        }
+        &__menu{
+            display: none;
+        }
+        &__search{
+            margin-right: 1em;
+        }
+    }
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 622px){
+    header .header{
+        &__logo{
+            width: 8em;
+            top: .5em
+        }
+    }
+    .container{
+        &__img{
+            width: 12em;
+        }
+        &__title{
+            font-size: 2em;
+            font-weight: 300;
+            margin-top: -2.3em;
+        }
+        &__greet{
+            margin-bottom: -0.3em;
+            font-size: 4em;
+            letter-spacing: -0.05em;
+            text-shadow: 0.05em -0.05em 0 $shadow;
+        }
+        &__title--rotate{
+            font-family: 'Poppins';
+            font-size: 3em;
+            font-weight: 300;
+            margin-top: -0.3em;
+            margin-bottom: 0em;
+        }
+        &__links{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    .post{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 72%;
+        margin: auto;
+        text-decoration: none;
+        color: $color_letter;
+        border-bottom: 0.1em solid $color_line;
+        &__img{
+            position: absolute;
+            width: 5.8em;
+            height: 5.8em;
+            opacity: 0;
+            transition: opacity 400ms ease-in-out;
+        }
+        &__date{
+        width: 5.8em;
+        height: 5.8em;
+        transition: opacity 400ms ease-in-out;
+        }
+        &__day{
+            font-family: 'Poppins-Bold';
+            margin-top: 0.5em;
+            font-size: 2em;
+        }
+        &__month{
+            margin-top: -1em;
+            text-transform: uppercase;
+            color: $color_gray;
+            letter-spacing: 0.2em;
+            font-size: 0.6em;
+        }
+        &__title{
+            margin-left: 2.5em;
+            font-size: 0.8em;
+        }
+    }
+    .instagram{
+        &__posts{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
     }
 }

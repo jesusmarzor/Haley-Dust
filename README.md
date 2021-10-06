@@ -2,7 +2,7 @@
 Página maquetada con HTML y SASS.
 
 ## Página Maquetada 💻
-https://jesusmarzor.github.io/Haley-Dust/
+https://jesusmarzor.com/Haley-Dust/
 
 ## Página Original 🙌
 https://themes.pixelwars.org/impose/

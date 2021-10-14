@@ -1,5 +1,5 @@
 # Haley-Dust
-Página maquetada con HTML y SASS.
+Página maquetada en Visual Studio Code con HTML y SASS. Tambien he implementado BEM, una metodología ágil de desarrollo basada en componentes.
 
 ## Página Maquetada 💻
 https://jesusmarzor.com/Haley-Dust/
